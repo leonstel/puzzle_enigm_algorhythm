@@ -52,16 +52,16 @@ public class Piece {
                 version2 = new Vector[]{
                         new Vector(0, 0),
                         new Vector(0, -1),
-                        new Vector(0, -2),
                         new Vector(1, -1),
+                        new Vector(0, -2),
                         new Vector(-1, -3)
                 };
 
                 version3 = new Vector[]{
                         new Vector(0, 0),
                         new Vector(-1, 0),
-                        new Vector(-2, 0),
                         new Vector(-2, -1),
+                        new Vector(-2, 0),
                         new Vector(-2, 1)
                 };
                 break;
@@ -84,10 +84,10 @@ public class Piece {
 
                 version3 = new Vector[]{
                         new Vector(0, 0),
-                        new Vector(0, 1),
-                        new Vector(0, 2),
+                        new Vector(-1, -1),
                         new Vector(-1, 0),
-                        new Vector(-1, -1)
+                        new Vector(0, 1),
+                        new Vector(0, 2)
                 };
                 break;
             case 4:
@@ -101,16 +101,16 @@ public class Piece {
 
                 version2 = new Vector[]{
                         new Vector(0, 0),
-                        new Vector(-1, -1),
                         new Vector(-1, 0),
+                        new Vector(-1, -1),
                         new Vector(-1, 1),
                         new Vector(-2, 1)
                 };
 
                 version3 = new Vector[]{
                         new Vector(0, 0),
-                        new Vector(0, 1),
                         new Vector(1, 1),
+                        new Vector(0, 1),
                         new Vector(2, 1),
                         new Vector(3, 2)
                 };
@@ -171,7 +171,7 @@ public class Piece {
                         new Vector(1, 0),
                         new Vector(1, -1),
                         new Vector(2, 1),
-                        new Vector(3, -2)
+                        new Vector(3, 2)  // !!
                 };
 
                 version2 = new Vector[]{
@@ -212,7 +212,7 @@ public class Piece {
                         new Vector(-1, 0),
                         new Vector(-2, 0),
                         new Vector(-3, 0),
-                        new Vector(-3, -1)
+                        new Vector(-3, 1)  // !!
                 };
                 break;
             case 9:
@@ -237,7 +237,7 @@ public class Piece {
                         new Vector(-1, 0),
                         new Vector(0, 1),
                         new Vector(1, 2),
-                        new Vector(1, 2)
+                        new Vector(1, 3)  // !!
                 };
                 break;
             case 10:
@@ -252,17 +252,17 @@ public class Piece {
                 version2 = new Vector[]{
                         new Vector(0, 0),
                         new Vector(-1, -1),
-                        new Vector(-2, -2),
+                        new Vector(-2, -1),
                         new Vector(-3, -2),
-                        new Vector(-2, -1)
+                        new Vector(-2, -2)
                 };
 
                 version3 = new Vector[]{
                         new Vector(0, 0),
                         new Vector(0, 1),
-                        new Vector(0, 2),
                         new Vector(1, 2),
-                        new Vector(1, 3)
+                        new Vector(1, 3),
+                        new Vector(0, 2)
                 };
                 break;
             case 11:

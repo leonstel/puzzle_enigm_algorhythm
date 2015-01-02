@@ -61,59 +61,59 @@ public class Board {
         availableBoardCo.add(new Vector(6,3));
         availableBoardCo.add(new Vector(7,3));
 
-//        availableBoardCo.add(new Vector(0,4));
-//        availableBoardCo.add(new Vector(1,4));
-//        availableBoardCo.add(new Vector(2,4));
-//        availableBoardCo.add(new Vector(3,4));
-//        availableBoardCo.add(new Vector(4,4));
-//        availableBoardCo.add(new Vector(5,4));
-//        availableBoardCo.add(new Vector(6,4));
-//        availableBoardCo.add(new Vector(7,4));
-//        availableBoardCo.add(new Vector(8,4));
-//
-//        availableBoardCo.add(new Vector(1,5));
-//        availableBoardCo.add(new Vector(2,5));
-//        availableBoardCo.add(new Vector(3,5));
-//        availableBoardCo.add(new Vector(4,5));
-//        availableBoardCo.add(new Vector(5,5));
-//        availableBoardCo.add(new Vector(6,5));
-//        availableBoardCo.add(new Vector(7,5));
-//        availableBoardCo.add(new Vector(8,5));
-//
-//        availableBoardCo.add(new Vector(2,6));
-//        availableBoardCo.add(new Vector(3,6));
-//        availableBoardCo.add(new Vector(4,6));
-//        availableBoardCo.add(new Vector(5,6));
-//        availableBoardCo.add(new Vector(6,6));
-//        availableBoardCo.add(new Vector(7,6));
-//        availableBoardCo.add(new Vector(8,6));
-//
-//        availableBoardCo.add(new Vector(3,7));
-//        availableBoardCo.add(new Vector(4,7));
-//        availableBoardCo.add(new Vector(5,7));
-//        availableBoardCo.add(new Vector(6,7));
-//        availableBoardCo.add(new Vector(7,7));
-//        availableBoardCo.add(new Vector(8,7));
-//
-//        availableBoardCo.add(new Vector(4,8));
-//        availableBoardCo.add(new Vector(5,8));
-//        availableBoardCo.add(new Vector(6,8));
-//        availableBoardCo.add(new Vector(7,8));
-//        availableBoardCo.add(new Vector(8,8));
+        availableBoardCo.add(new Vector(0,4));
+        availableBoardCo.add(new Vector(1,4));
+        availableBoardCo.add(new Vector(2,4));
+        availableBoardCo.add(new Vector(3,4));
+        availableBoardCo.add(new Vector(4,4));
+        availableBoardCo.add(new Vector(5,4));
+        availableBoardCo.add(new Vector(6,4));
+        availableBoardCo.add(new Vector(7,4));
+        availableBoardCo.add(new Vector(8,4));
+
+        availableBoardCo.add(new Vector(1,5));
+        availableBoardCo.add(new Vector(2,5));
+        availableBoardCo.add(new Vector(3,5));
+        availableBoardCo.add(new Vector(4,5));
+        availableBoardCo.add(new Vector(5,5));
+        availableBoardCo.add(new Vector(6,5));
+        availableBoardCo.add(new Vector(7,5));
+        availableBoardCo.add(new Vector(8,5));
+
+        availableBoardCo.add(new Vector(2,6));
+        availableBoardCo.add(new Vector(3,6));
+        availableBoardCo.add(new Vector(4,6));
+        availableBoardCo.add(new Vector(5,6));
+        availableBoardCo.add(new Vector(6,6));
+        availableBoardCo.add(new Vector(7,6));
+        availableBoardCo.add(new Vector(8,6));
+
+        availableBoardCo.add(new Vector(3,7));
+        availableBoardCo.add(new Vector(4,7));
+        availableBoardCo.add(new Vector(5,7));
+        availableBoardCo.add(new Vector(6,7));
+        availableBoardCo.add(new Vector(7,7));
+        availableBoardCo.add(new Vector(8,7));
+
+        availableBoardCo.add(new Vector(4,8));
+        availableBoardCo.add(new Vector(5,8));
+        availableBoardCo.add(new Vector(6,8));
+        availableBoardCo.add(new Vector(7,8));
+        availableBoardCo.add(new Vector(8,8));
 
         pieces = new Piece[]{
                 new Piece(1),
                 new Piece(2),
                 new Piece(3),
                 new Piece(4),
-//                new Piece(5),
-//                new Piece(6),
-//                new Piece(7),
-//                new Piece(8),
-//                new Piece(9),
-//                new Piece(10),
-//                new Piece(11),
-//                new Piece(12)
+                new Piece(5),
+                new Piece(6),
+                new Piece(7),
+                new Piece(8),
+                new Piece(9),
+                new Piece(10),
+                new Piece(11),
+                new Piece(12)
         };
 
         SolveEnigma(1);
@@ -128,22 +128,22 @@ public class Board {
             for (int x = 0; x < board[y].length; x++) {
                 currentBoardCo = new Vector(x, y);
 
-                System.out.println("lay down p : "+p+" at ["+x+","+y+"]");
+//                System.out.println("lay down p : "+p+" at ["+x+","+y+"]");
 
                 for(int v = 1; v<4; v++) {
                     boolean result = TryToFit(piece, v, currentBoardCo);
                     if (result) {
-                        System.out.println("piece " + piece.piece + " fits"+" version : "+v);
+//                        System.out.println("piece " + piece.piece + " fits"+" version : "+v);
                         if (p < pieces.length) {
                             if (SolveEnigma(piece.piece + 1)) {
                                 return true;
                             } else {
-                                System.out.println("restore empty of piece " + p +" version : "+v);
+//                                System.out.println("restore empty of piece " + p +" version : "+v);
                                 restoreEmptySpots(currentBoardCo, currentPieces.get(currentPieces.size() - 1));
                                 currentPieces.remove(currentPieces.size() - 1);
                             }
                         } else {
-                            System.out.println("finish");
+//                            System.out.println("finish");
                             for (int c = 0; c<currentPieces.size(); c++){
                                 System.out.println(
                                         "piece : "+currentPieces.get(c).piece+
